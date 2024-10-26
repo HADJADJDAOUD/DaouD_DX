@@ -1,38 +1,22 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.lines-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Add space between lines */
 }
 
-.App-link {
-  color: #61dafb;
+.line {
+  margin-bottom: 0px; /* You already have gap, so margin here is not necessary */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 768px) {
+  .lines-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: inline;
+     /* Maintain gap between lines even in row layout */
   }
-  to {
-    transform: rotate(360deg);
+
+  .line {
+    flex: 1 1 50%; /* Each line will take up 50% of the width on larger screens */
   }
 }

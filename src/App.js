@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Head from "./components/Head";
+import Hero from "./components/Hero";
+import { BackgroundBeams } from "./components/ui/background-beams";
+import { FloatingNav } from "./components/floating-navbar";
+import { BrowserRouter } from "react-router-dom";
+import Grid from "./components/Grid";
+import RecentProjects from "./components/RecentProjects";
+import { navItems } from "./data";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <main className="relative bg-black flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10  ">
+    <main className="relative w-full bg-black-100 flex justify-center items-center  flex-col overflow-hidden  sm:px-10  ">
+      <BrowserRouter>
+        <FloatingNav navItems={navItems} className={""} />
+        <Head />
+        <Hero />
+
+        <BackgroundBeams />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <About />
+        <RecentProjects />
+        <Skills />
+        <Contact />
+      </BrowserRouter>
+    </main>
   );
 }
 

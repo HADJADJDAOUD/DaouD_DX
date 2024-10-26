@@ -10,6 +10,7 @@ import { navItems } from "./data";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+
 function App() {
   return (
     // <main className="relative bg-black flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10  ">

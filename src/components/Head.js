@@ -13,7 +13,7 @@ export default function Head() {
   }, []);
 
   return (
-    <div className="w-full z-10 absolute sm:top-2 top-36 h-[46rem] ">
+    <div className="w-full z-10 absolute sm:top-2 top-2 h-[46rem] ">
       {!showRest && <TextHoverEffect  text="DX" />}
     </div>
   );

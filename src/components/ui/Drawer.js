@@ -1,35 +1,51 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence, Varinats } from "framer-motion";
-
+import { motion, AnimatePresence } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
 export const Drawer = ({ isOpen, onClose }) => {
+  const [name, setName] = useState(""); // Added state for name
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const notify = () => {
+    toast("email is sent .");
+    console.log("setn");
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent the default form submission
 
-  const handleSubmit = () => {
-    // Handle form submission logic
-    console.log("Email:", email);
-    console.log("Message:", message);
-    onClose(); // Close drawer after submission (optional)
+    // Prepare the email data
+    const templateParams = {
+      to_email: "daoudhdj@gmail.com", // Your email address
+      from_name: name, // User's name
+      from_email: email, // User's email
+      message: message,
+    };
+    console.log("it here");
+    console.log(process.env.REACT_APP_KEY);
+    console.log(process.env.REACT_APP_MY_EMAIL);
+    // Send the email using SMTP.js
+    window.Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: process.env.REACT_APP_MY_EMAIL,
+      Password: process.env.REACT_APP_KEY,
+      To: templateParams.to_email,
+      From: `${templateParams.from_name} <${templateParams.from_email}>`,
+      Subject: "New message from contact form",
+      Body: `${templateParams.message}`,
+    })
+      .then((message) => {
+        notify();
+        onClose(); // Close drawer after successful submission
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+        alert("Failed to send email. Please try again later.");
+      });
   };
-  const placeholders = [
-    "What's the first rule of Fight Club?",
-    "Who is Tyler Durden?",
-    "Where is Andrew Laeddis Hiding?",
-    "Write a Javascript method to reverse a string",
-    "How to assemble your own PC?",
-  ];
-  const handleChange = (e) => {
-    console.log(e.target.value);
-  };
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log("submitted");
-  };
+
   return (
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Blur background effect */}
           <motion.div
             className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-10"
             initial={{ opacity: 0 }}
@@ -38,7 +54,6 @@ export const Drawer = ({ isOpen, onClose }) => {
             transition={{ duration: 1 }}
           ></motion.div>
 
-          {/* Drawer */}
           <motion.div
             className="fixed inset-0 flex justify-center items-end z-20"
             initial={{ y: "100%" }}
@@ -47,7 +62,6 @@ export const Drawer = ({ isOpen, onClose }) => {
             transition={{ type: "spring", damping: 20, stiffness: 300 }}
           >
             <div className="bg-[#09090b] w-full justify-center flex flex-col p-8 rounded-t-xl shadow-lg border border-gray-700 mx-auto mb-0">
-              {/* Content */}
               <button
                 onClick={onClose}
                 className="text-white relative self-end text-2xl focus:outline-none hover:text-red-500 transition-colors duration-300 transform hover:scale-110"
@@ -62,13 +76,22 @@ export const Drawer = ({ isOpen, onClose }) => {
                   We'd love to hear from you. Please send us your message.
                 </p>
 
+                {/* Name Input */}
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="border border-gray-600 bg-transparent text-white rounded-xl px-3 py-2 w-full mb-4 focus:outline-none focus:ring-2 focus:ring-purple-950"
+                />
+
                 {/* Email Input */}
                 <input
                   type="email"
                   placeholder="Your Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border  border-gray-600 bg-transparent text-white rounded-xl  px-3 py-2 w-full mb-4 focus:outline-none focus:ring-2 focus:ring-purple-950"
+                  className="border border-gray-600 bg-transparent text-white rounded-xl px-3 py-2 w-full mb-4 focus:outline-none focus:ring-2 focus:ring-purple-950"
                 />
 
                 {/* Message Input */}
@@ -81,10 +104,10 @@ export const Drawer = ({ isOpen, onClose }) => {
                 ></textarea>
 
                 {/* Buttons */}
-                <div className="flex justify-end  w-full">
+                <div className="flex justify-end w-full">
                   <button
-                    onClick={onClose}
-                    className="bg-slate-800 no-underline  group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm font-semibold leading-6  text-white inline-block"
+                    onClick={handleSubmit}
+                    className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-sm font-semibold leading-6 text-white inline-block"
                   >
                     <span className="absolute inset-0 overflow-hidden rounded-full">
                       <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -112,6 +135,7 @@ export const Drawer = ({ isOpen, onClose }) => {
                 </div>
               </div>
             </div>
+            
           </motion.div>
         </>
       )}

@@ -5,7 +5,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { Link } from "react-router-dom";
+
 import { cn } from "../lib/utils";
 
 export const FloatingNav = ({ navItems, className }) => {

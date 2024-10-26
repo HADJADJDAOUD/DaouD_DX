@@ -4,6 +4,7 @@ import { SlidingText } from "./ui/SlidingText";
 import { SparklesCore } from "./ui/sparkles";
 import { useState } from "react";
 import { Drawer } from "./ui/Drawer";
+import toast, { Toaster } from "react-hot-toast";
 import { socialMedia } from "../data";
 
 export default function Contact() {
@@ -91,6 +92,17 @@ export default function Contact() {
 
         <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
       </div>
+      <Toaster
+        toastOptions={{
+          className: "text-white bg-black",
+          style: {
+            border: "1px solid purple",
+
+            color: "white",
+            backgroundColor: "black",
+          },
+        }}
+      />
       <div className="flex mt-16 p-8 md:flex-row flex-col justify-evenly items-center w-full">
         <p className="md:text-base text-sm md:font-normal m-4 font-light text-white  ">
           Copyright © 2024 Daoud_DX

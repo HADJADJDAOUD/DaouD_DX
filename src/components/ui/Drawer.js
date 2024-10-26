@@ -34,6 +34,7 @@ export const Drawer = ({ isOpen, onClose }) => {
     })
       .then((message) => {
         notify();
+        console.log(message);
         onClose(); // Close drawer after successful submission
       })
       .catch((error) => {

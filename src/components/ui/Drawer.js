@@ -27,7 +27,7 @@ export const Drawer = ({ isOpen, onClose }) => {
       Host: "smtp.elasticemail.com",
       Username: process.env.REACT_APP_MY_EMAIL,
       Password: process.env.REACT_APP_KEY,
-      To: templateParams.to_email,
+      To: process.env.REACT_APP_MY_EMAIL,
       From: `${templateParams.from_name} <${templateParams.from_email}>`,
       Subject: "New message from contact form",
       Body: `${templateParams.message}`,
@@ -135,7 +135,6 @@ export const Drawer = ({ isOpen, onClose }) => {
                 </div>
               </div>
             </div>
-            
           </motion.div>
         </>
       )}

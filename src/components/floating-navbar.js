@@ -27,7 +27,7 @@ export const FloatingNav = ({ navItems, className }) => {
       }
     }
   });
-  console.log(navItems[0].link);
+  //console.log(navItems[0].link);
   return (
     <AnimatePresence mode="wait">
       <motion.div

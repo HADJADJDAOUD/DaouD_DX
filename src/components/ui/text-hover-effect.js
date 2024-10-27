@@ -7,7 +7,7 @@ export const TextHoverEffect = ({ text, duration }) => {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ cx: "100%", cy: "100%" });
-  console.log(hovered);
+  //console.log(hovered);
 
   useEffect(() => {
     if (svgRef.current && cursor.x !== null && cursor.y !== null) {
@@ -18,8 +18,8 @@ export const TextHoverEffect = ({ text, duration }) => {
         cx: `${cxPercentage}%`,
         cy: `${cyPercentage}%`,
       });
-      console.log(cyPercentage);
-      console.log(cxPercentage);
+      //console.log(cyPercentage);
+      //console.log(cxPercentage);
     }
   }, [cursor]);
 
@@ -104,7 +104,7 @@ export const TextHoverEffect = ({ text, duration }) => {
           strokeDasharray: 1000,
         }}
         transition={{
-          duration:7,
+          duration: 7,
           ease: "easeInOut",
         }}
       >

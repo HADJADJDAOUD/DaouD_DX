@@ -12,8 +12,8 @@ export const ContactSlider = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here, you can handle the submission logic (e.g., sending email)
-    console.log("Email:", email);
-    console.log("Message:", message);
+    //console.log("Email:", email);
+    //console.log("Message:", message);
 
     // Reset the fields after submission
     setEmail("");
@@ -83,5 +83,3 @@ export const ContactSlider = () => {
     </div>
   );
 };
-
-

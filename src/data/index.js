@@ -237,10 +237,6 @@ export const projects = [
   },
 ];
 
-
-
-
-
 export const workExperience = [
   {
     id: 1,
@@ -282,7 +278,7 @@ export const skills = [
       "../assets/mongodb-icon-2.svg",
       "../assets/nodejs-2.svg",
 
-      "../assets/tailwind-css-2.svg",
+      "../assets/tailwind.svg",
     ],
   },
   {

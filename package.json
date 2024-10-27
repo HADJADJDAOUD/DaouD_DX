@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@elasticemail/elasticemail-client": "^4.0.23",
+    "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-hover-card": "^1.1.2",
     "@splinetool/react-spline": "^4.0.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -14,6 +15,7 @@
     "@tsparticles/slim": "^3.5.0",
     "@types/node": "^22.7.7",
     "@types/react": "^18.3.11",
+    "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",

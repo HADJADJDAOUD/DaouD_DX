@@ -27,7 +27,7 @@ export const SlidingText = ({ text }) => {
       transition: "opacity 0.5s ease, transform 0.7s ease", // Smooth transition
     },
   };
-  console.log(showText);
+  //console.log(showText);
   return (
     <div
       ref={scope}

@@ -21,7 +21,11 @@ export const Drawer = ({ isOpen, onClose }) => {
     }
 
     setLoading(true);
-
+    console.log(
+      process.env.REACT_APP_PUBLIC_ID,
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID
+    );
     try {
       const result = await emailjs.send(
         process.env.REACT_APP_SERVICE_ID,

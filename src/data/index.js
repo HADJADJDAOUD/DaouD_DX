@@ -235,6 +235,41 @@ export const projects = [
       },
     ],
   },
+  {
+    "id": 6,
+    "title": "admin-dashboard",
+    "des": "A feature-rich admin dashboard built with the MERN stack, offering seamless data visualization, user management, and deployment-ready capabilities.",
+    "img": "../assets/Dashboard.png",
+    "iconLists": ["/re.svg", "/mui.svg", "/rtkq.svg", "/node.svg", "/db.svg"],
+    "link": "https://github.com/HADJADJDAOUD/Dashboard",
+    "people": [
+      {
+        "id": 1,
+        "name": "Reactjs",
+        "designation": "",
+        "image": "../assets/react-2.svg"
+      },
+      {
+        "id": 2,
+        "name": "Redux Toolkit",
+        "designation": "",
+        "image": "../assets/redux.svg"
+      },
+      {
+        "id": 3,
+        "name": "Nodejs",
+        "designation": "",
+        "image": "../assets/nodejs-2.svg"
+      },
+      {
+        "id": 4,
+        "name": "MongoDB",
+        "designation": "",
+        "image": "../assets/mongodb-icon-2.svg"
+      },
+    
+    ]
+  }
 ];
 
 export const workExperience = [

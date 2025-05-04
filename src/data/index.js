@@ -274,7 +274,7 @@ export const projects = [
     "id": 7,
     "title": "dashboard2",
     "des": "A feature-rich admin dashboard built with the MERN stack, offering seamless data visualization, user management, and deployment-ready capabilities.",
-    "img": "../assets/Dashboard2.png",
+    "img": "../assets/dashboard2.png",
     "iconLists": ["/re.svg", "/mui.svg", "/rtkq.svg", "/node.svg", "/db.svg"],
     "link": "https://github.com/HADJADJDAOUD/Dashboard",
     "people": [

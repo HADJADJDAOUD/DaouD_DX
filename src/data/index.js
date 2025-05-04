@@ -304,7 +304,36 @@ export const projects = [
       },
     
     ]
-  }
+  } ,
+  {
+    id: 8,
+    title: "Delivery Food website",
+    des: "a web where you can list and sell Food  and keep an eye of the progress and track them",
+    img: "../assets/food.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://github.com/HADJADJDAOUD/Food_delivery_web",
+    people: [
+      {
+        id: 1,
+        name: "Reactjs",
+        designation: "",
+        image: "../assets/react-2.svg",
+      },
+      {
+        id: 2,
+        name: "Nodejs",
+        designation: "",
+        image: "../assets/nodejs-2.svg",
+      },
+      {
+        id: 3,
+        name: "MongDb",
+        designation: "",
+        image: "../assets/mongodb-icon-2.svg",
+      },
+     
+    ],
+  },
 ];
 
 export const workExperience = [

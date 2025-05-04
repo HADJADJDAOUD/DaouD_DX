@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import { BackgroundBeams } from "./components/ui/background-beams";
 import { FloatingNav } from "./components/floating-navbar";
 import { BrowserRouter } from "react-router-dom";
-import Grid from "./components/Grid";
+
 import RecentProjects from "./components/RecentProjects";
 import { navItems } from "./data";
 import About from "./components/About";
@@ -20,7 +20,7 @@ function App() {
         <Head />
         <Hero />
 
-        <BackgroundBeams />
+        {/* <BackgroundBeams /> */}
 
         <br />
         <br />

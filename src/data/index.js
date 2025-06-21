@@ -409,6 +409,26 @@ export const projects = [
     { id: 3, name: 'PyTorch',        designation: '', image: '../assets/pytorch.svg' },
   ]
 },
+{
+  id: 12,  // use the next available ID
+  type: 'ai',
+  title: 'simpleRagApp – Chat with PDFs 📄💬',
+  des: 'A Retrieval-Augmented Generation (RAG) app that lets you upload PDFs and ask   questions about their content using   Hugging Face models .',
+  img: '../assets/chat_pdf.png', // add this thumbnail to your assets
+  iconLists: [
+    '../assets/python.svg',
+    '../assets/langchain.svg',
+    '../assets/streamlit.svg',
+    '../assets/transformers.svg'
+  ],
+  link: 'https://github.com/HADJADJDAOUD/simpleRagApp-chat_pdf-',
+  people: [
+    { id: 1, name: 'LangChain',       designation: '', image: '../assets/langchain.svg' },
+       { id: 2, name: 'Flask',            designation: '', image: '../assets/flask.svg' },
+    { id: 3, name: 'Hugging Face Hub',designation: '', image: '../assets/Hugging.svg' },
+    { id: 4, name: 'Python',          designation: '', image: '../assets/python.svg' }
+  ]
+},
 ];
 
 export const workExperience = [

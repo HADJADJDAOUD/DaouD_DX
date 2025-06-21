@@ -9,6 +9,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
+   
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
@@ -50,6 +51,7 @@ export const gridItems = [
 
   {
     id: 5,
+     "type":"web",
     title: "Currently building a JS Animation library",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
@@ -73,6 +75,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+     "type":"web",
     title: "Real Estate Marketplace",
     des: "This real estate marketplace website provides a secure platform for users to browse",
     img: "../assets/state.png",
@@ -107,6 +110,7 @@ export const projects = [
   },
   {
     id: 2,
+     "type":"web",
     title: "booking-app",
     des: "this project is a MERN Stack Reservation App about building a hotel reservation system",
     img: "../assets/booking.png",
@@ -141,6 +145,7 @@ export const projects = [
   },
   {
     id: 3,
+     "type":"web",
     title: "social-media-app",
     des: "this social-media app where you can share posts and thoughts and gain new friendship with ease",
     img: "../assets/social.png",
@@ -175,6 +180,7 @@ export const projects = [
   },
   {
     id: 4,
+     "type":"web",
     title: "shopping management sys",
     des: "a web where you can list and sell products and keep an eye of the progress",
     img: "../assets/shop.png",
@@ -209,6 +215,7 @@ export const projects = [
   },
   {
     id: 5,
+ "type":"web",
     title: "Brilliants",
     des: "a mobile application focusing in gathering the best algerian programmers and technicians",
     img: "../assets/brillinats.png",
@@ -237,6 +244,7 @@ export const projects = [
   },
   {
     "id": 6,
+     "type":"web",
     "title": "admin-dashboard",
     "des": "A feature-rich admin dashboard built with the MERN stack, offering seamless data visualization, user management, and deployment-ready capabilities.",
     "img": "../assets/Dashboard.png",
@@ -272,6 +280,7 @@ export const projects = [
   },
   {
     "id": 7,
+  "type":"web",
     "title": "dashboard2",
     "des": "A feature-rich admin dashboard built with the MERN stack, offering seamless data visualization, user management, and deployment-ready capabilities.",
     "img": "../assets/dashboard2.png",
@@ -307,6 +316,7 @@ export const projects = [
   } ,
   {
     id: 8,
+     "type":"web",
     title: "Delivery Food website",
     des: "a web where you can list and sell Food  and keep an eye of the progress and track them",
     img: "../assets/food.png",
@@ -334,6 +344,71 @@ export const projects = [
      
     ],
   },
+  {
+  id: 9,
+  type: 'ai',
+  title: 'Sentiment Analysis Model',
+  des: 'A Python‑based sentiment analysis model that classifies text reviews into positive or negative sentiment using machine learning techniques.',
+  img: '../assets/sentiment.png',           // add a thumbnail image in your assets
+  iconLists: [
+    '../assets/python.svg',
+    '../assets/scikit-learn.svg',
+    '../assets/pandas.svg',
+    '../assets/numpy.svg',
+    '../assets/nltk.svg'
+  ],
+  link: 'https://github.com/HADJADJDAOUD/sentiment-analysis',
+  people: [
+    { id: 1, name: 'Python',       designation: '', image: '../assets/python.svg' },
+     { id: 2, name: 'Transformers',      designation: '', image: '../assets/transformers.png' },
+    { id: 3, name: 'pandas',       designation: '', image: '../assets/pandas.svg' },
+    { id: 4, name: 'NumPy',        designation: '', image: '../assets/numpy.svg' },
+   
+  ]
+},
+{
+  id: 10,                           // update to next available ID
+  type: 'ai',
+  title: 'Hand Gesture Control with Voice Activation',
+  des: ` control your computer's volume and
+    screen brightness using hand gestures, with a sprinkle of voice command magic!`,
+  img: '../assets/hand.png',    // add a thumbnail in your assets folder
+  iconLists: [
+    '../assets/python.svg',
+    '../assets/opencv.svg',
+    '../assets/mediapipe.svg',
+    '../assets/pycaw.svg',
+    '../assets/screen-brightness-control.svg',
+    '../assets/speechrecognition.svg',
+    '../assets/pyaudio.svg'
+  ],
+  link: 'https://github.com/HADJADJDAOUD/hand-gesture-control',
+  people: [
+    { id: 1, name: 'Python',                    designation: '', image: '../assets/python.svg' },
+    { id: 2, name: 'OpenCV',                    designation: '', image: '../assets/opencv.svg' },
+    { id: 3, name: 'MediaPipe',         designation: '', image: '../assets/media.png' },
+  { id: 4, name: 'SpeechRecognition', designation: '', image: '../assets/speechrecognition.png' }
+  ]
+},
+{
+  id: 11,  
+  type: 'ai',
+  title: 'PDF AI Translator (French ↔ English)',
+  des: 'An AI‑powered PDF translator that extracts text blocks and uses Facebook’s M2M100 model to translate between French and English.',
+  img: '../assets/pdf-translator.png',           // add a thumbnail in your assets folder
+  iconLists: [
+    '../assets/python.svg',
+    '../assets/transformers.svg',
+    '../assets/pytorch.svg',
+    '../assets/tqdm.svg'
+  ],
+  link: 'https://github.com/HADJADJDAOUD/pdf_ai_translator_french_eng',
+  people: [
+    { id: 1, name: 'Python',         designation: '', image: '../assets/python.svg' },
+    { id: 2, name: 'Transformers',   designation: '', image: '../assets/transformers.png' },
+    { id: 3, name: 'PyTorch',        designation: '', image: '../assets/pytorch.svg' },
+  ]
+},
 ];
 
 export const workExperience = [

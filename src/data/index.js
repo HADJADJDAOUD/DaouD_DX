@@ -484,10 +484,10 @@ export const skills = [
   },
   {
     id: 3,
-    title: "Machine Learning",
-    desc: "Knowledgeable in machine learning algorithms and models, with experience in supervised learning.",
+    title: "Deep learning & ML",
+    desc: "Experienced in building machine learning models using TensorFlow and NumPy.",
     className: "flex-1 text-purple-700 border-slate-800",
-    thumbnail: ["../assets/tensorflow-2.svg", "../assets/numpy-1.svg"],
+    thumbnail: ["../assets/tensorflow-2.svg", "../assets/numpy-1.svg",'../assets/Hugging.svg'],
   },
   {
     id: 4,
@@ -495,6 +495,13 @@ export const skills = [
     desc: "Skilled in creating engaging presentations using Microsoft PowerPoint.",
     className: "flex-1 text-orange-700 border-slate-800",
     thumbnail: ["../assets/powerpoint-2.svg"],
+  },
+  {
+    id: 5,
+    title: "Quantum Computing",
+    desc: "Familiar with quantum computing concepts and programming using Qiskit.",
+    className: "flex-1 text-yellow-700 border-slate-800",
+    thumbnail: ["../assets/quantum.svg"],
   },
 ];
 

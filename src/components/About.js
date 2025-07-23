@@ -1,14 +1,21 @@
 import React from "react";
 import { SparklesCore } from "./ui/sparkles";
+import ScrollReveal from "./ScrollReveal";
 
-import ScrollEffectParagraph from "./ui/ScrollEffectParagraph";
-
+import GradientText from "./GradientText";
 const About = () => {
   return (
     <div className="mb-16" id="about">
       <div className=" mt-32  h-[15rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-        <h1 className="md:text-7xl text-5xl lg:text-9xl mt-4 font-bold text-center text-white relative z-20">
-          About
+        <h1 className="md:text-7xl text-5xl font-sans lg:text-8xl mt-4 font-bold text-center text-white relative z-20">
+          <GradientText
+            colors={["#1A0033", "#2C0A5D", "#1A005D", "#1A0033", "#2C0A5D"]}
+            animationSpeed={4}
+            showBorder={false}
+            className="custom-class"
+          >
+            About
+          </GradientText>
         </h1>
         <div className="w-[30rem] h-40 relative">
           {/* Gradients */}
@@ -32,10 +39,21 @@ const About = () => {
         </div>
       </div>
       <div
-        style={{ fontFamily: "tit" }}
-        className="text-white text-[15px] lg:text-[35px] w-[90vw] mx-auto  lg:mt-20 mb-80 "
+        style={{ fontFamily: " sans" }}
+        className="text-white text-[15px] lg:text-[15px] w-[90vw] mx-auto  lg:mt-20 mb-80 "
       >
-        <ScrollEffectParagraph />
+        <ScrollReveal
+          baseOpacity={0}
+          enableBlur={true}
+          baseRotation={3}
+          blurStrength={10}
+        >
+          I'm a full-stack developer proficient in MERN and Django, with
+          hands-on experience in machine learning and deep learning through
+          personal projects. I'm also exploring quantum mechanics and its
+          applications in Quantum Machine Learning to bridge web tech, AI, and
+          emerging computing paradigms.
+        </ScrollReveal>
       </div>
     </div>
   );

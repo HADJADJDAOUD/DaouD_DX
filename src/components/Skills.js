@@ -2,12 +2,20 @@ import React from "react";
 import { SparklesCore } from "./ui/sparkles";
 import { Button } from "./ui/moving-border";
 import { skills, workExperience } from "../data";
+import GradientText from "./GradientText";
 export default function Skills() {
   return (
     <div className="py-20 " id="skills">
       <div className=" mt-28 h-[15rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <h1 className="md:text-7xl text-5xl lg:text-9xl mt-4 font-bold text-center text-white relative z-20">
-          Skills
+            <GradientText
+                     colors={["#1A0033", "#2C0A5D", "#1A005D", "#1A0033", "#2C0A5D"]}
+                     animationSpeed={4}
+                     showBorder={false}
+                     className="custom-class"
+                   >
+                     Skills
+                   </GradientText>
         </h1>
         <div className="w-[30rem] h-40 relative">
           {/* Gradients */}

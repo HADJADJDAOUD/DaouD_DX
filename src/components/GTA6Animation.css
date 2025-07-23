@@ -1,0 +1,72 @@
+/* GTA6Animation.css */
+
+.about-container {
+  display: flex;
+  height: 100vh;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gta6-title {
+  font-family: "Impact", sans-serif;
+  font-size: 8rem;
+  color: #fff;
+  position: relative;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards, glitch 3s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+  position: relative;
+}
+
+/* Fade each letter in sequence */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Quick glitch flicker */
+@keyframes glitch {
+  0%,
+  5%,
+  10%,
+  15%,
+  20%,
+  100% {
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+  6% {
+    text-shadow: -2px 0 red;
+    transform: translate(2px, -1px);
+  }
+  12% {
+    text-shadow: 2px 0 cyan;
+    transform: translate(-2px, 1px);
+  }
+  18% {
+    text-shadow: -2px 0 magenta;
+    transform: translate(1px, -2px);
+  }
+}
+
+/* Once all letters in, hold full title steady */
+.gta6-title {
+  animation: hold 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes hold {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

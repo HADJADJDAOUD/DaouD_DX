@@ -46,7 +46,7 @@ const ScrollReveal = ({
           trigger: el,
           scroller,
           start: "top bottom",
-          end: "+=480px", // stretch to 800px of scroll
+          end: "+=450px", // stretch to 800px of scroll
           scrub: 0.8, // 0.8s smoothing on scrub
         },
       }
@@ -65,7 +65,7 @@ const ScrollReveal = ({
           trigger: el,
           scroller,
           start: "top bottom-=10%",
-          end: "+=620px", // a longer reveal
+          end: "+=600px", // a longer reveal
           scrub: 1, // 1s smoothing
         },
       }
@@ -84,7 +84,7 @@ const ScrollReveal = ({
             trigger: el,
             scroller,
             start: "top bottom-=10%",
-            end: "+=620px",
+            end: "+=600px",
             scrub: 1,
           },
         }

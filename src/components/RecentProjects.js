@@ -155,6 +155,16 @@ export default function RecentProjects() {
                     {/* Project Type Indicator */}
                     {getProjectTypeIndicator(project)}
                     
+                    {/* WIP Badge */}
+                    {project.wip && (
+                      <div className="absolute top-4 left-4 z-40 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5 animate-pulse">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        In Progress
+                      </div>
+                    )}
+                    
                     <CardItem
                       translateZ="50"
                       className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -167,23 +177,56 @@ export default function RecentProjects() {
                       translateZ="60"
                       className="text-neutral-500 text-sm z-40 relative max-w-sm mt-2 dark:text-neutral-300"
                     >
-                      <LinkPreview
-                        url={project.link}
-                        className="font-bold z-40 relative"
-                      >
-                        click here{" "}
-                      </LinkPreview>{" "}
-                      to get the source code
+                      {project.wip ? (
+                        <span className="text-amber-400/80 italic">🚧 Work in Progress</span>
+                      ) : (
+                        <>
+                          <LinkPreview
+                            url={project.link}
+                            className="font-bold z-40 relative"
+                          >
+                            click here{" "}
+                          </LinkPreview>{" "}
+                          to get the source code
+                        </>
+                      )}
                     </CardItem>
                     
                     <CardItem translateZ="100" className="w-full mt-4">
-                      <img
-                        src={project.img}
-                        height="1000"
-                        width="1000"
-                        className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl transition-all duration-300"
-                        alt="thumbnail"
-                      />
+                      <div className="relative overflow-hidden rounded-xl">
+                        <img
+                          src={project.img}
+                          height="1000"
+                          width="1000"
+                          className={`h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl transition-all duration-300 ${
+                            project.wip ? 'blur-[6px] scale-105' : ''
+                          }`}
+                          alt="thumbnail"
+                        />
+                        
+                        {/* WIP Overlay with Progress Bar */}
+                        {project.wip && (
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-xl flex flex-col items-center justify-end p-6">
+                            {/* Progress Info */}
+                            <div className="w-full space-y-2">
+                              <div className="flex items-center justify-between text-white text-xs font-medium">
+                                <span className="uppercase tracking-wider opacity-80">Development Progress</span>
+                                <span className="text-amber-400 font-bold">{project.progress}%</span>
+                              </div>
+                              {/* Progress Bar Track */}
+                              <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm">
+                                <div 
+                                  className="h-full rounded-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-400 shadow-lg shadow-amber-500/30 progress-bar-glow"
+                                  style={{ 
+                                    width: `${project.progress}%`,
+                                    transition: 'width 1.5s ease-in-out'
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     </CardItem>
                     
                     <div className="flex justify-between items-center flex-col mt-20">
@@ -235,6 +278,15 @@ export default function RecentProjects() {
         
         .hover\\:scale-102:hover {
           transform: scale(1.02);
+        }
+        
+        @keyframes progressGlow {
+          0%, 100% { box-shadow: 0 0 8px rgba(245, 158, 11, 0.3); }
+          50% { box-shadow: 0 0 16px rgba(245, 158, 11, 0.6); }
+        }
+        
+        .progress-bar-glow {
+          animation: progressGlow 2s ease-in-out infinite;
         }
       `}</style>
     </div>

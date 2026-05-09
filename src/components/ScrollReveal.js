@@ -46,8 +46,8 @@ const ScrollReveal = ({
           trigger: el,
           scroller,
           start: "top bottom",
-          end: "+=450px", // stretch to 800px of scroll
-          scrub: 0.8, // 0.8s smoothing on scrub
+          end: "+=300px", // faster rotation reveal
+          scrub: 0.8,
         },
       }
     );
@@ -59,14 +59,14 @@ const ScrollReveal = ({
       { opacity: baseOpacity },
       {
         opacity: 1,
-        stagger: 0.1, // you can even increase stagger to 0.1
+        stagger: 0.05, 
         ease: "none",
         scrollTrigger: {
           trigger: el,
           scroller,
-          start: "top bottom-=10%",
-          end: "+=600px", // a longer reveal
-          scrub: 1, // 1s smoothing
+          start: "top bottom-=15%",
+          end: "+=350px", // snappier reveal
+          scrub: 1,
         },
       }
     );
@@ -78,13 +78,13 @@ const ScrollReveal = ({
         { filter: `blur(${blurStrength}px)` },
         {
           filter: "blur(0px)",
-          stagger: 0.1,
+          stagger: 0.05,
           ease: "none",
           scrollTrigger: {
             trigger: el,
             scroller,
-            start: "top bottom-=10%",
-            end: "+=600px",
+            start: "top bottom-=15%",
+            end: "+=350px",
             scrub: 1,
           },
         }
@@ -105,7 +105,7 @@ const ScrollReveal = ({
   return (
     <h2 ref={containerRef} className={`my-5 ${containerClassName}`}>
       <p
-        className={`text-[35px] leading-[1.8] font-semibold ${textClassName}`}
+        className={`text-[28px] md:text-[35px] leading-[2.2] font-semibold tracking-tight ${textClassName}`}
       >
         {splitText}
       </p>

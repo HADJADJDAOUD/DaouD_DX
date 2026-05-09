@@ -429,6 +429,46 @@ export const projects = [
     { id: 4, name: 'Python',          designation: '', image: '../assets/python.svg' }
   ]
 },
+{
+  id: 13,
+  type: 'ai',
+  wip: true,
+  progress: 45,
+  title: 'Digitalizing Arabic Books',
+  des: 'Ongoing project utilizing OCR and NLP to digitize and preserve classical Arabic literature. Combining deep learning models with text processing pipelines.',
+  img: '../assets/arabic-books.png',
+  iconLists: [
+    '../assets/python.svg',
+    '../assets/pytorch.svg',
+    '../assets/transformers.svg',
+  ],
+  link: '#',
+  people: [
+    { id: 1, name: 'Python',       designation: '', image: '../assets/python.svg' },
+    { id: 2, name: 'PyTorch',      designation: '', image: '../assets/pytorch.svg' },
+    { id: 3, name: 'Transformers', designation: '', image: '../assets/transformers.png' },
+  ]
+},
+{
+  id: 14,
+  type: 'ai',
+  wip: true,
+  progress: 35,
+  title: 'Arabic Poetry Search Engine',
+  des: 'Developing a semantic search engine specifically for Arabic poetry, leveraging embeddings and vector databases for intelligent retrieval.',
+  img: '../assets/arabic-poetry.png',
+  iconLists: [
+    '../assets/python.svg',
+    '../assets/pytorch.svg',
+    '../assets/transformers.svg',
+  ],
+  link: '#',
+  people: [
+    { id: 1, name: 'Python',       designation: '', image: '../assets/python.svg' },
+    { id: 2, name: 'PyTorch',      designation: '', image: '../assets/pytorch.svg' },
+    { id: 3, name: 'Hugging Face', designation: '', image: '../assets/Hugging.svg' },
+  ]
+},
 ];
 
 export const workExperience = [
@@ -464,42 +504,44 @@ export const workExperience = [
 export const skills = [
   {
     id: 1,
-    title: "MERN Stack",
-    desc: "Proficient in MongoDB, Express.js, React.js, and Node.js to build full-stack applications.",
+    title: "MERN Stack & Django",
+    desc: "Full-stack development with MongoDB, Express.js, React, Node.js, and Django. RESTful APIs, JWT auth, and scalable web apps.",
     className: "flex-1 text-blue-700 border-slate-800",
     thumbnail: [
       "../assets/react-2.svg",
       "../assets/mongodb-icon-2.svg",
       "../assets/nodejs-2.svg",
-
-      "../assets/tailwind.svg",
+      "../assets/django.svg",
     ],
   },
   {
     id: 2,
-    title: "Django",
-    desc: "Experienced in developing backend services using Django framework with Python.",
-    className: "flex-1 text-green-700 border-slate-800",
-    thumbnail: ["../assets/django.svg"],
+    title: "AI/ML & NLP",
+    desc: "Neural Architecture Search, CNNs, Transformers, RAG Systems, OCR, Semantic Search, Scikit-learn, and PyTorch.",
+    className: "flex-1 text-purple-700 border-slate-800",
+    thumbnail: ["../assets/pytorch.svg", "../assets/numpy-1.svg", "../assets/Hugging.svg"],
   },
   {
     id: 3,
-    title: "Deep learning & ML",
-    desc: "Experienced in building machine learning models using TensorFlow and NumPy.",
-    className: "flex-1 text-purple-700 border-slate-800",
-    thumbnail: ["../assets/tensorflow-2.svg", "../assets/numpy-1.svg",'../assets/Hugging.svg'],
+    title: "LLMs & AI Systems",
+    desc: "Vector Databases, Embeddings, Prompt Engineering, and Document Processing Pipelines with LLMs.",
+    className: "flex-1 text-cyan-700 border-slate-800",
+    thumbnail: ["../assets/transformers.png", "../assets/langchain.svg"],
   },
   {
     id: 4,
-    title: "PowerPoint",
-    desc: "Skilled in creating engaging presentations using Microsoft PowerPoint.",
-    className: "flex-1 text-orange-700 border-slate-800",
-    thumbnail: ["../assets/powerpoint-2.svg"],
+    title: "Frontend & Design",
+    desc: "Tailwind CSS, Responsive Design, Framer Motion, React Router, and modern UI/UX practices.",
+    className: "flex-1 text-green-700 border-slate-800",
+    thumbnail: [
+      "../assets/tailwind.svg",
+      "../assets/react-2.svg",
+    ],
   },
   {
     id: 5,
     title: "Quantum Computing",
-    desc: "Familiar with quantum computing concepts and programming using Qiskit.",
+    desc: "Exploring quantum computing concepts and Quantum Business Foundations (IBM Certified, 2025).",
     className: "flex-1 text-yellow-700 border-slate-800",
     thumbnail: ["../assets/quantum.svg"],
   },

@@ -40,19 +40,20 @@ const About = () => {
       </div>
       <div
         style={{ fontFamily: " sans" }}
-        className="text-white text-[15px] lg:text-[15px] w-[90vw] mx-auto  lg:mt-20 mb-80 "
+        className="text-white w-[90vw] lg:w-[80vw] mx-auto lg:mt-20 mb-40"
       >
         <ScrollReveal
           baseOpacity={0}
           enableBlur={true}
-          baseRotation={3}
-          blurStrength={10}
+          baseRotation={2}
+          blurStrength={8}
         >
-          I'm a full-stack developer proficient in MERN and Django, with
-          hands-on experience in machine learning and deep learning through
-          personal projects. I'm also exploring quantum mechanics and its
-          applications in Quantum Machine Learning to bridge web tech, AI, and
-          emerging computing paradigms.
+          Full-Stack & AI Engineer with hands-on experience building scalable
+          web applications, intelligent AI systems, and applied machine learning
+          solutions. Specialized in MERN stack and Django development, RESTful
+          APIs, authentication systems, and AI-driven applications. Strong focus
+          on NLP, Deep Learning, and automated ML systems, with growing expertise
+          in Quantum Computing.
         </ScrollReveal>
       </div>
     </div>
